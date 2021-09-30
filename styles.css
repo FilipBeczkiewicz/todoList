@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #161722;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+}
+
+p, button {
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+section {
+  min-height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: 400px;
+  max-width: 600px;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #57ddff;
+  position: relative;
+  padding-bottom: .7rem;
+}
+
+.container__title::after {
+  content: 'TODO';
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  font-size: 1.05rem;
+  letter-spacing: 10px;
+  color: white;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.container__title p {
+  color: white;
+  font-size: 2.7rem;
+}
+
+.container__input {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container__input input {
+  width: 100%;
+  background-color: #25273c;
+  color: white;
+  padding: 1rem 1.3rem;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  border-top-left-radius: 10px;
+}
+
+.container__input button {
+  padding: 0 1.1rem 0 0;
+  background: #25273c;
+  color: white;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+}
+
+.todos {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todos__footer {
+  width: 100%;
+  background: #25273c;
+  padding: .6rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #4d5066;
+  color: white;
+  font-size: 1rem;
+}
+
+.todos .todo-error {
+  background: #cc0000;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px;
+  height: 0;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.todos .todo-error-active {
+  height: 100%;
+  padding: 15px;
+}
+
+.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.deletebutton {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.deletebutton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.deletebutton:hover::after {
+  background: #4d5066;
+}
+
+.todo {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .9rem 1.1rem;
+  border-bottom: 1px solid #4d5066;
+  background: #25273c;
+}
+
+.done {
+  background: #101019;
+}
+
+p:hover, button:hover {
+  color: #57ddff;
+}
+
+.item-left:hover {
+  color: white;
+}
+
+.all {
+  cursor: pointer;
+}
+
+.delated {
+  cursor: pointer;
+}
+
+.clear {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,220 @@
+$bright-blue: hsl(220, 98%, 61%);
+$check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-GrayishBlue: hsl(236, 33%, 92%);
+$Light-GrayishBlue: hsl(233, 11%, 84%);
+$Dark-GrayishBlue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: $Very-Dark-Blue;
+}
+
+
+header {
+    height: 100vh;
+    width: 100%;
+
+}
+
+p, button {
+    transition: color .2s;
+}
+
+
+
+section {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+
+.container {
+    width: 400px;
+    max-width: 600px;
+    margin-top: 4rem;
+    display: flex;
+    ;
+    flex-direction: column;
+
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid hsl(192, 100%, 67%);
+        position: relative;
+        padding-bottom: .7rem;
+
+        &::after {
+            content: 'TODO';
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            font-size: 1.05rem;
+            letter-spacing: 10px;
+            color: white;
+            transform: translateX(-50%);
+        }
+
+        & p {
+            color: white;
+            font-size: 2.7rem;
+        }
+    }
+
+    &__input {
+        margin-top: 2rem;
+        display: flex;
+        & input {
+            width: 100%;
+            background-color: $Very-Dark-Desaturated-Blue;
+            color: white;
+            padding: 1rem 1.3rem;
+            border: none;
+            outline: none;
+            font-size: 1.3rem;
+            border-top-left-radius: 10px;
+        }
+
+        & button {
+            padding: 0 1.1rem 0 0;
+            background: $Very-Dark-Desaturated-Blue;
+            color: white;
+            font-size: 1.2rem;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            border-top-right-radius: 10px;
+
+        }
+    }
+}
+
+
+.todos {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    &__footer {
+        width: 100%;
+        background: $Very-Dark-Desaturated-Blue;
+        padding: .6rem 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $Very-Dark-Grayish-Blue;
+        color: white;
+        font-size: 1rem;
+        // border-bottom-left-radius: 10px;
+        // border-bottom-right-radius: 10px;
+    }
+
+    & .todo-error {
+        background: #cc0000;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        height: 0;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        transition: all .5s;
+        &-active {
+            height: 100%;
+            padding: 15px;
+        }
+    }
+
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.deletebutton {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    &:hover::after {
+        background: $Very-Dark-Grayish-Blue;
+    }
+}
+
+
+.todo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .9rem 1.1rem;
+    border-bottom: 1px solid $Very-Dark-Grayish-Blue;
+    background: $Very-Dark-Desaturated-Blue;
+}
+
+.done {
+    background: hsl(234, 24%, 8%);
+}
+
+p:hover, button:hover {
+    color: hsl(192, 100%, 67%);
+}
+
+.item-left:hover {
+    color: white;
+}
+
+.all {
+    cursor: pointer;
+}
+
+.delated {
+    cursor: pointer;
+}
+
+.clear {
+    cursor: pointer;
+}
